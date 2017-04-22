@@ -592,6 +592,41 @@ MonoBehaviour:
       joystickId2: 0
       splitAxis: 0
       sourceAxisPole: 0
+    - templateId: 26
+      joystickId: 26
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 0
+    - templateId: 27
+      joystickId: 27
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 0
+    - templateId: 28
+      joystickId: 28
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 0
+    - templateId: 29
+      joystickId: 29
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 0
+    - templateId: 30
+      joystickId: 30
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 0
+    - templateId: 31
+      joystickId: 31
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 0
+    - templateId: 32
+      joystickId: 32
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 0
   - id: 12
     name: Logitech G920
     joystickGuid: "0f5ba315-3e83-4237-8374-28bea596914d\r\n0f5ba315-3e83-4237-8374-28bea596914d\r\n"

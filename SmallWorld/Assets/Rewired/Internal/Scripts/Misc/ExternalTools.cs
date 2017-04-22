@@ -1,4 +1,52 @@
-﻿// Copyright (c) 2015 Augie R. Maddox, Guavaman Enterprises. All rights reserved.
+﻿#if UNITY_6 || UNITY_7 || UNITY_8 || UNITY_9 || UNITY_10 || UNITY_2017 || UNITY_2018 || UNITY_2019 || UNITY_2020
+#define UNITY_6_PLUS
+#endif
+
+#if UNITY_5 || UNITY_6_PLUS
+#define UNITY_5_PLUS
+#endif
+
+#if UNITY_5_1 || UNITY_5_2 || UNITY_5_3_OR_NEWER || UNITY_6_PLUS
+#define UNITY_5_1_PLUS
+#endif
+
+#if UNITY_5_2 || UNITY_5_3_OR_NEWER || UNITY_6_PLUS
+#define UNITY_5_2_PLUS
+#endif
+
+#if UNITY_5_3_OR_NEWER || UNITY_6_PLUS
+#define UNITY_5_3_PLUS
+#endif
+
+#if UNITY_5_4_OR_NEWER || UNITY_6_PLUS
+#define UNITY_5_4_PLUS
+#endif
+
+#if UNITY_5_5_OR_NEWER || UNITY_6_PLUS
+#define UNITY_5_5_PLUS
+#endif
+
+#if UNITY_5_6_OR_NEWER || UNITY_6_PLUS
+#define UNITY_5_6_PLUS
+#endif
+
+#if UNITY_5_7_OR_NEWER || UNITY_6_PLUS
+#define UNITY_5_7_PLUS
+#endif
+
+#if UNITY_5_8_OR_NEWER || UNITY_6_PLUS
+#define UNITY_5_8_PLUS
+#endif
+
+#if UNITY_5_9_OR_NEWER || UNITY_6_PLUS
+#define UNITY_5_9_PLUS
+#endif
+
+#if UNITY_4_6 || UNITY_5 || UNITY_6_PLUS
+#define SUPPORTS_UNITY_UI
+#endif
+
+// Copyright (c) 2015 Augie R. Maddox, Guavaman Enterprises. All rights reserved.
 #pragma warning disable 0219
 #pragma warning disable 0618
 #pragma warning disable 0649
@@ -16,7 +64,7 @@ namespace Rewired.Utils {
     public class ExternalTools : IExternalTools {
 
         // Linux Tools
-#if UNITY_5 && UNITY_STANDALONE_LINUX
+#if UNITY_5_PLUS && UNITY_STANDALONE_LINUX
         public bool LinuxInput_IsJoystickPreconfigured(string name) {
             return UnityEngine.Input.IsJoystickPreconfigured(name);
         }
@@ -333,5 +381,30 @@ namespace Rewired.Utils {
             pids = new List<int>();
         }
 #endif
+        #region Unity UI
+
+
+#if SUPPORTS_UNITY_UI
+
+        public bool UnityUI_Graphic_GetRaycastTarget(object graphic) {
+            if(graphic as UnityEngine.UI.Graphic == null) return false;
+#if UNITY_5_2_PLUS
+            return (graphic as UnityEngine.UI.Graphic).raycastTarget;
+#else
+            return true;
+#endif
         }
+        public void UnityUI_Graphic_SetRaycastTarget(object graphic, bool value) {
+            if(graphic as UnityEngine.UI.Graphic == null) return;
+#if UNITY_5_2_PLUS
+            (graphic as UnityEngine.UI.Graphic).raycastTarget = value;
+#endif
+        }
+#else
+        public bool UnityUI_Graphic_GetRaycastTarget(object graphic) { return true; }
+        public void UnityUI_Graphic_SetRaycastTarget(object graphic, bool value) { }
+#endif
+
+        #endregion
+    }
 }
