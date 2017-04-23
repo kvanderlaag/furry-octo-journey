@@ -108,5 +108,25 @@ MonoBehaviour:
       joystickId2: 0
       splitAxis: 0
       sourceAxisPole: 0
+  - id: 4
+    name: Thrustmaster T.Flight HOTAS 4
+    joystickGuid: ee5daca0-3791-45d2-b979-bbbfdf5085f8
+    fileGuid: 495ca4e700b67094da44a69256bf8938
+    elementIdentifierMappings:
+    - templateId: 0
+      joystickId: 25
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 0
+    - templateId: 1
+      joystickId: 26
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 0
+    - templateId: 2
+      joystickId: 27
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 0
   elementIdentifierIdCounter: 3
-  joystickIdCounter: 4
+  joystickIdCounter: 5

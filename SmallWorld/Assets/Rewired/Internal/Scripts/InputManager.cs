@@ -119,6 +119,14 @@ namespace Rewired {
             platform = Platform.WiiU;
 #endif
 
+#if UNITY_N3DS
+            platform = Platform.N3DS;
+#endif
+
+#if UNITY_SWITCH
+            platform = Platform.Switch;
+#endif
+
 #if UNITY_FLASH
             platform = Platform.Flash;
 #endif

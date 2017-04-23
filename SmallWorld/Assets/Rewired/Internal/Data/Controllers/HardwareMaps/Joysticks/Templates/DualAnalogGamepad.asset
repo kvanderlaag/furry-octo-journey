@@ -219,6 +219,11 @@ MonoBehaviour:
       joystickId2: 0
       splitAxis: 0
       sourceAxisPole: 0
+    - templateId: 13
+      joystickId: 5
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 0
   - id: 1
     name: Logitech Dual Action
     joystickGuid: 886dd9d4-58ce-4212-90f5-2967676e7823
@@ -2115,7 +2120,7 @@ MonoBehaviour:
       splitAxis: 0
       sourceAxisPole: 0
   - id: 18
-    name: Nvidia Shield Controller
+    name: Nvidia Shield Controller (original)
     joystickGuid: 69636ddb-16c2-4272-81a3-d03828644356
     fileGuid: e34a98c39b9ad0d4fa35be4bed909998
     elementIdentifierMappings:
@@ -2224,6 +2229,116 @@ MonoBehaviour:
       joystickId2: 0
       splitAxis: 0
       sourceAxisPole: 0
+  - id: 81
+    name: Nvidia Shield Controller (2017 model)
+    joystickGuid: 041eed16-8846-4c94-9e38-addd4b9ce00b
+    fileGuid: 1061f9c39091cf242bd6958aca060c2d
+    elementIdentifierMappings:
+    - templateId: 0
+      joystickId: 0
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 0
+    - templateId: 1
+      joystickId: 1
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 2
+      joystickId: 2
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 3
+      joystickId: 3
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 4
+      joystickId: 6
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 5
+      joystickId: 7
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 7
+      joystickId: 8
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 8
+      joystickId: 9
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 10
+      joystickId: 10
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 11
+      joystickId: 4
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 12
+      joystickId: 11
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 13
+      joystickId: 5
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 14
+      joystickId: 12
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 15
+      joystickId: 13
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 16
+      joystickId: 14
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 17
+      joystickId: 16
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 18
+      joystickId: 17
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 19
+      joystickId: 18
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 20
+      joystickId: 19
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 21
+      joystickId: 20
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 22
+      joystickId: 21
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
   - id: 20
     name: OUYA Gamepad
     joystickGuid: df6fcab5-d1fb-4797-ace1-580617ddc45e
@@ -7064,5 +7179,435 @@ MonoBehaviour:
       joystickId2: 0
       splitAxis: 0
       sourceAxisPole: 1
+  - id: 74
+    name: Oculus Touch - Left
+    joystickGuid: af791365-96f2-4160-9ed6-b0b4f59259d0
+    fileGuid: 7b69f30fe572e6e40bc8ea5937acac47
+    elementIdentifierMappings:
+    - templateId: 0
+      joystickId: 0
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 0
+    - templateId: 1
+      joystickId: 1
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 7
+      joystickId: 2
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 8
+      joystickId: 4
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 10
+      joystickId: 10
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 11
+      joystickId: 7
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 15
+      joystickId: 6
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 17
+      joystickId: 11
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+  - id: 75
+    name: Oculus Touch - Right
+    joystickGuid: bea8fcd6-2b0e-47d5-b690-ee611d811ed4
+    fileGuid: cf80366decf286845a889ef8bd8c39d1
+    elementIdentifierMappings:
+    - templateId: 2
+      joystickId: 0
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 0
+    - templateId: 3
+      joystickId: 1
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 4
+      joystickId: 2
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 5
+      joystickId: 4
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 12
+      joystickId: 10
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 13
+      joystickId: 7
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 18
+      joystickId: 11
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+  - id: 76
+    name: Oculus Remote
+    joystickGuid: c372a74c-32b5-4926-94e1-b74cc6cf20c3
+    fileGuid: 52bff7a274246f641a58d7c22b604e32
+    elementIdentifierMappings:
+    - templateId: 0
+      joystickId: 1
+      joystickId2: 3
+      splitAxis: 1
+      sourceAxisPole: 0
+    - templateId: 1
+      joystickId: 0
+      joystickId2: 2
+      splitAxis: 1
+      sourceAxisPole: 1
+    - templateId: 4
+      joystickId: 4
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 5
+      joystickId: 5
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+  - id: 77
+    name: OpenVR Controller - Left (Unity)
+    joystickGuid: 9e887770-ca98-4794-b301-6c5ab57c7f8a
+    fileGuid: 850ae8baf1914314eb043f9bf01c1872
+    elementIdentifierMappings:
+    - templateId: 0
+      joystickId: 0
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 0
+    - templateId: 1
+      joystickId: 0
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 17
+      joystickId: 5
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 11
+      joystickId: 2
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 7
+      joystickId: 4
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 8
+      joystickId: 3
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+  - id: 78
+    name: OpenVR Controller - Right (Unity)
+    joystickGuid: 3eaa61f6-1f57-4d16-ab11-af7fc74b5640
+    fileGuid: bb64fb959113f5447a64cd4bb517fd18
+    elementIdentifierMappings:
+    - templateId: 2
+      joystickId: 0
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 0
+    - templateId: 3
+      joystickId: 0
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 18
+      joystickId: 5
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 13
+      joystickId: 2
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 4
+      joystickId: 4
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 5
+      joystickId: 3
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+  - id: 79
+    name: Nintendo Switch Joy-Con (L)
+    joystickGuid: 3eb01142-da0e-4a86-8ae8-a15c2b1f2a04
+    fileGuid: 9ec45b94bd8c5c145be4ea6830db80be
+    elementIdentifierMappings:
+    - templateId: 0
+      joystickId: 0
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 0
+    - templateId: 1
+      joystickId: 1
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 17
+      joystickId: 12
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 4
+      joystickId: 2
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 5
+      joystickId: 3
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 7
+      joystickId: 4
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 8
+      joystickId: 5
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 11
+      joystickId: 6
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 13
+      joystickId: 7
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 14
+      joystickId: 11
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 15
+      joystickId: 10
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 10
+      joystickId: 8
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 12
+      joystickId: 9
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+  - id: 80
+    name: Nintendo Switch Joy-Con (R)
+    joystickGuid: 605dc720-1b38-473d-a459-67d5857aa6ea
+    fileGuid: 80487ad48e254e343a231e8344cb22b4
+    elementIdentifierMappings:
+    - templateId: 0
+      joystickId: 0
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 0
+    - templateId: 1
+      joystickId: 1
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 17
+      joystickId: 12
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 4
+      joystickId: 2
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 5
+      joystickId: 3
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 7
+      joystickId: 4
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 8
+      joystickId: 5
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 11
+      joystickId: 6
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 13
+      joystickId: 7
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 14
+      joystickId: 11
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 15
+      joystickId: 10
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 10
+      joystickId: 8
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 12
+      joystickId: 9
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+  - id: 82
+    name: Nintendo Switch Pro Controller
+    joystickGuid: 7bf3154b-9db8-4d52-950f-cd0eed8a5819
+    fileGuid: bab987e4a193e39429f4d1826e07fad8
+    elementIdentifierMappings:
+    - templateId: 0
+      joystickId: 0
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 0
+    - templateId: 1
+      joystickId: 1
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 2
+      joystickId: 2
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 3
+      joystickId: 3
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 4
+      joystickId: 4
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 5
+      joystickId: 5
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 7
+      joystickId: 6
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 8
+      joystickId: 7
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 10
+      joystickId: 8
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 11
+      joystickId: 10
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 12
+      joystickId: 9
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 13
+      joystickId: 11
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 14
+      joystickId: 12
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 15
+      joystickId: 13
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 16
+      joystickId: 14
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 17
+      joystickId: 16
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 18
+      joystickId: 17
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 19
+      joystickId: 18
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 20
+      joystickId: 19
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 21
+      joystickId: 20
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
+    - templateId: 22
+      joystickId: 21
+      joystickId2: 0
+      splitAxis: 0
+      sourceAxisPole: 1
   elementIdentifierIdCounter: 23
-  joystickIdCounter: 74
+  joystickIdCounter: 83

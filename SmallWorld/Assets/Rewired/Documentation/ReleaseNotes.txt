@@ -1,3 +1,299 @@
+1.1.1.0:
+
+  Changes:
+    - Windows Standalone, XInput: Eliminated periodic lag on some versions of Windows/XInput when checking for device changes.
+    - Added "partial" keyword to all constant classes exported from the Rewired Input Manager.
+
+  New Controller Definitions:
+    - Nvidia Shield Controller (2017 model)
+    - Nintendo Switch Joy-Con (Left)
+    - Nintendo Switch Joy-Con (Right)
+    - Nintendo Switch Pro Controller
+   
+  API Changes:
+    - Added ComponentControls.TouchJoystick.GetValue method.
+    - Added ComponentControls.TouchJoystick.GetRawValue method.
+    
+  Bug fixes:
+    - Touch Joystick now re-centers stick to the Axis 2D calibrated zero instead of Vector2.zero.
+    - Windows Standalone, Raw Input, Use XInput disabled: Added workaround for issue causing Xbox One controller to fail to return input when attaching Visual Studio debugger to Unity editor.
+    - Fixed incorrect Player Id exported when exporting Players to constants from Rewired Editor.
+
+1.1.0.0:
+
+  Changes:
+    - Added Touch Controls: Touch Controller, Touch Joystick, Touch Button, Touch Pad, Touch Region. (Requires Unity 5.0+, 5.3+ for optimal results.)
+    - Added Tilt Control. (Requires Unity 5.0+.)
+    - Added Input Mapper system for easier input mapping.
+    - The Keyboard can now be assigned and removed from Players like the Mouse using the Player.controllers.hasKeyboard property.
+    - Controllers can be enabled and disabled using the Controller.enabled property. Disabled Controllers will not produce any input.
+    - Action Element Maps can now be enabled and disabled using the ActionElementMap.enabled property.
+    - Windows Standalone: Added XInput as a primary input source option.
+    - Windows Standalone, Raw Input: Joysticks now return input when the application is not in focus. (Requires "Ignore Input When App Not In Focus" option to be disabled).
+    - Added "Exclude from Polling" option to buttons in Hardware Joystick Maps.
+    - Added ability to export Players and Custom Controllers to constants.
+    - Android: "Support Unknown Gamepads" option is now enabled by default.
+    - Replaced event system for events in order to better handle exceptions thrown by event listeners and issues caused by failure to unsubscribe from events and then destroying the GameObject of the subscriber. Exceptions thrown by event listeners will no longer stop events from being sent to the remaining listeners.
+    - Polling now returns an element identifier id for keyboard keys.
+    - Replacing an existing Action Element Map in a Controller Map no longer creates a new Action Element Map and instead reuses the existing one.
+    - Updated Debug Information to include new changes and display more information.
+    - Added DevTools/DebugInformation tool for use in debugging builds.
+    - Added DevTools/JoystickElementIdentifier scene.
+    - Added DevTools/UnityJoystickElementIdentifier scene.
+    - Added Press Start To Join example.
+    - Added Press Any Button To Join example.
+    - Added Touch Controls 1 example.
+    - Added Touch Buttons 1 example.
+    - Added Touch Joysticks 1 example.
+    - Added Simple Control Remapping example.
+    - Changed Control Remapping 1 example to use Mapping Listener and User Data Store.
+    - Control Mapper is now an optional install offered during setup.
+
+  New Controller Definitions:
+    - Saitek X-56 Rhino Stick
+    - Saitek X-56 Rhino Throttle
+    - CH Products FlightStick Pro
+    - CH Products CombatStick
+    - Thrustmaster T.Flight Hotas 4
+    - Thrustmaster T.Flight Stick X
+    - Oculus Touch - Left (Unity input only)
+    - Oculus Touch - Right (Unity input only)
+    - Oculus Remote (Unity input only)
+    - OpenVR Controller - Left (Unity input only)
+    - OpenVR Controller - Right (Unity input only)
+
+  Modified Controller Definitions:
+    - Logitech G29: Added optional Logitech G Driving Force Shifter mappings.
+    - SteelSeries Stratus XL HID (Android/Win): Windows Raw Input, Direct Input, Fallback: Added mappings to support device with latest firmware and SteelSeries Engine installed.
+
+  Controller Template Changes:
+    - Added Left Pedal, Right Pedal, and Slide Pedals to HOTAS Template.
+    - Added Left Pedal, Right Pedal, and Slide Pedals to Thrustmaster TWCS Throttle Template map.
+
+  API Changes:
+    - Added ReInput.ControllerHelper.DestroyCustomController method.
+    - Added InputActionEventData.GetAxisDelta method.
+    - Added InputActionEventData.GetAxisRawDelta method.
+    - Added Controller.enabled property.
+    - Added Controller.Elements property.
+    - Added Controller.elementCount property.
+    - Added Controller.GetElementIdentifierById method.
+    - Added Keyboard.GetKeyCodeByButtonIndex method.
+    - Added Keyboard.GetKeyCodeById method.
+    - Added Keyboard.GetButtonIndexByKeyCode method.
+    - Added Keyboard.GetElementIdentifierByKeyCode method.
+    - Added Keyboard.GetKeyName(KeyCode key, ModifierKeyFlags flags) method overload.
+    - Added Mouse.screenPositionPrev property.
+    - Added Mouse.screenPositionDelta property.
+    - Added CustomController.ClearAxisValue method.
+    - Added CustomController.ClearAxisValueById method.
+    - Added CustomController.ClearButtonValue method.
+    - Added CustomController.ClearButtonValueById method.
+    - Added ActionElementMap.enabled property.
+    - Added ActionElementMap.controllerMap property.
+    - Added ActionElementMap.ShowInField method.
+    - Added AxisCalibration.applyRangeCalibration public setter.
+    - Added InputActionEventType.ButtonRepeating enum value.
+    - Added InputActionEventType.NegativeButtonRepeating enum value.
+    - Added InputActionEventData.GetButtonRepeating method.
+    - Added InputActionEventData.GetNegativeButtonRepeating method.
+    - Added Player.GetAxisDelta method.
+    - Added Player.GetAxisRawDelta method.
+    - Added Player.GetButtonRepeating method.
+    - Added Player.GetNegativeButtonRepeating method.
+    - Added Player.ControllerHelper.hasKeyboard property.
+    - Added Player.ControllerHelper.MapHelper.GetFirstButtonMapWithAction(ControllerType controllerType, int controllerId, int actionId, bool skipDisabledMaps) overload.
+    - Added Player.ControllerHelper.MapHelper.GetFirstButtonMapWithAction(ControllerType controllerType, int controllerId, string actionName, bool skipDisabledMaps) overload.
+    - Added Player.ControllerHelper.MapHelper.ButtonMapsWithAction(ControllerType controllerType, int controllerId, int actionId, bool skipDisabledMaps) overload.
+    - Added Player.ControllerHelper.MapHelper.ButtonMapsWithAction(ControllerType controllerType, int controllerId, string actionName, bool skipDisabledMaps) overload.
+    - Added Player.ControllerHelper.MapHelper.GetFirstAxisMapWithAction(ControllerType controllerType, int controllerId, int actionId, bool skipDisabledMaps) overload.
+    - Added Player.ControllerHelper.MapHelper.GetFirstAxisMapWithAction(ControllerType controllerType, int controllerId, string actionName, bool skipDisabledMaps) overload.
+    - Added Player.ControllerHelper.MapHelper.AxisMapsWithAction(ControllerType controllerType, int controllerId, int actionId, bool skipDisabledMaps) overload.
+    - Added Player.ControllerHelper.MapHelper.AxisMapsWithAction(ControllerType controllerType, int controllerId, string actionName, bool skipDisabledMaps) overload.
+    - Added Player.ControllerHelper.MapHelper.GetFirstElementMapWithAction(ControllerType controllerType, int controllerId, int actionId, bool skipDisabledMaps) overload.
+    - Added Player.ControllerHelper.MapHelper.GetFirstElementMapWithAction(ControllerType controllerType, int controllerId, string actionName, bool skipDisabledMaps) overload.
+    - Added Player.ControllerHelper.MapHelper.ElementMapsWithAction(ControllerType controllerType, int controllerId, int actionId, bool skipDisabledMaps) overload.
+    - Added Player.ControllerHelper.MapHelper.ElementMapsWithAction(ControllerType controllerType, int controllerId, string actionName, bool skipDisabledMaps) overload.
+    - Added Player.ControllerHelper.MapHelper.GetFirstMapInCategory(Controller controller, string categoryName)  method overload.
+    - Added Player.ControllerHelper.MapHelper.GetFirstMapInCategory(Controller controller, int categoryId) method overload.
+    - Added Player.ControllerHelper.MapHelper.GetMap(int mapId) method overload.
+    - Added Player.ControllerHelper.MapHelper.GetMap(Controller controller, int mapId) method overload.
+    - Added Player.ControllerHelper.MapHelper.GetMap(Controller controller, int categoryId, int layoutId) method overload.
+    - Added Player.ControllerHelper.MapHelper.GetMap(Controller controller, string categoryName, string layoutName) method overload.   
+    - Added Player.ControllerHelper.MapHelper.GetMaps(Controller controller) method overload.
+    - Added Player.ControllerHelper.MapHelper.SetAllMapsEnabled(bool state, Controller controller)
+    - Added Player.ControllerHelper.MapHelper.SetAllMapsEnabled(bool state, ControllerType controllerType, int controllerId)
+    - Added Player.ControllerHelper.MapHelper.SetMapsEnabled(bool state, Controller controller, int categoryId)
+    - Added Player.ControllerHelper.MapHelper.SetMapsEnabled(bool state, Controller controller, int categoryId, int layoutId)
+    - Added Player.ControllerHelper.MapHelper.SetMapsEnabled(bool state, Controller controller, string categoryName)
+    - Added Player.ControllerHelper.MapHelper.SetMapsEnabled(bool state, Controller controller, string categoryName, string layoutName)
+    - Added Player.ControllerHelper.MapHelper.GetMapsInCategory method.
+    - Added Player.ControllerHelper.MapHelper.ClearMapsInCategory method.
+    - Added Player.ControllerHelper.MapHelper.ClearMapsInLayout method.
+    - Added Player.ControllerHelper.MapHelper.ClearMapsForController method.
+    - Added Player.ControllerHelper.MapHelper.ClearMapsForControllerInLayout method.
+    - Added Player.ControllerHelper.ConflictCheckingHelper.DisableElementAssignmentConflicts method.
+    - Added ControllerMap.DisableElementAssignmentConflicts method.
+    - Added ControllerMap.GetFirstButtonMapMatch method.
+    - Added ControllerMap.GetFirstElementMapMatch method.
+    - Added ControllerMap.ForEachButtonMapMatch method.
+    - Added ControllerMap.ForEachElementMapMatch method.
+    - Added ControllerMap.ForEachElementAssignmentConflict method.
+    - Added ControllerMap.SetAllButtonMapsEnabled method.
+    - Added ControllerMap.SetAllElementMapsEnabled method.
+    - Added ControllerMap.DisableElementAssignmentConflicts method.
+    - Added ControllerMap.ContainsElementIdentifier method.
+    - Added ControllerMap.ContainsKeyboardKey method.
+    - Added ControllerMap.DoesElementAssignmentConflict(ControllerMap controllerMap, bool skipDisabledMaps) method overload.
+    - Added ControllerMap.DoesElementAssignmentConflict(ActionElementMap actionElementMap, bool skipDisabledMaps) method overload.
+    - Added ControllerMap.DoesElementAssignmentConflict(ElementAssignmentConflictCheck conflictCheck, bool skipDisabledMaps) method overload.
+    - Added ControllerMap.ElementAssignmentConflicts(ControllerMap controllerMap, bool skipDisabledMaps) method overload.
+    - Added ControllerMap.ElementAssignmentConflicts(ActionElementMap actionElementMap, bool skipDisabledMaps) method overload.
+    - Added ControllerMap.ElementAssignmentConflicts(ElementAssignmentConflictCheck conflictCheck, bool skipDisabledMaps) method overload.
+    - Added ControllerMap.RemoveElementAssignmentConflicts(ControllerMap controllerMap, bool skipDisabledMaps) method overload.
+    - Added ControllerMap.RemoveElementAssignmentConflicts(ActionElementMap actionElementMap, bool skipDisabledMaps) method overload.
+    - Added ControllerMap.RemoveElementAssignmentConflicts(ElementAssignmentConflictCheck conflictCheck, bool skipDisabledMaps) method overload.
+    - Added ControllerMap.GetElementMaps(bool skipDisabledMaps) method overload.
+    - Added ControllerMap.ElementMapsWithAction(int actionId, bool skipDisabledMaps) method overload.
+    - Added ControllerMap.ElementMapsWithAction(string actionName, bool skipDisabledMaps) method overload.
+    - Added ControllerMap.GetFirstElementMapWithAction(int actionId, bool skipDisabledMaps) method overload.
+    - Added ControllerMap.GetFirstElementMapWithAction(string actionName, bool skipDisabledMaps) method overload.
+    - Added ControllerMap.GetElementMapsWithAction(string actionName, bool skipDisabledMaps) method overload.
+    - Added ControllerMap.GetElementMapsWithAction(int actionId, bool skipDisabledMaps) method overload.
+    - Added ControllerMap.ButtonMapsWithAction(int actionId, bool skipDisabledMaps) method overload.
+    - Added ControllerMap.ButtonMapsWithAction(string actionName, bool skipDisabledMaps) method overload.
+    - Added ControllerMap.GetFirstButtonMapWithAction(int actionId, bool skipDisabledMaps) method overload.
+    - Added ControllerMap.GetFirstButtonMapWithAction(string actionName, bool skipDisabledMaps) method overload.
+    - Added ControllerMap.GetButtonMaps(bool skipDisabledMaps) method overload.
+    - Added ControllerMap.GetButtonMapsWithAction(int actionId, bool skipDisabledMaps) method overload.
+    - Added ControllerMap.GetButtonMapsWithAction(string actionName, bool skipDisabledMaps) method overload.
+    - Added ControllerMap.ReplaceOrCreateElementMap(ElementAssignment elementAssignment, out ActionElementMap result) method overload.
+    - Added ControllerMap.CreateElementMap(ElementAssignment elementAssignment, out ActionElementMap result) method overload.
+    - Added ControllerMap.CreateElementMap(int actionId, Pole axisContribution, KeyCode keyCode, ModifierKey modifierKey1, ModifierKey modifierKey2, ModifierKey modifierKey3, out ActionElementMap result) method overload.
+    - Added ControllerMap.CreateElementMap(int actionId, Pole axisContribution, KeyCode keyCode, ModifierKeyFlags modifierKeyFlags, out ActionElementMap result) method overload.
+    - Added ControllerMap.CreateElementMap(int actionId, Pole axisContribution, int elementIdentifierId, ControllerElementType elementType, AxisRange axisRange, bool invert, out ActionElementMap result) method overload.
+    - Added ControllerMap.ReplaceElementMap(ElementAssignment elementAssignment, out ActionElementMap result) method overload.
+    - Added ControllerMap.ReplaceElementMap(int elementMapId, int actionId, Pole axisContribution, KeyCode keyCode, ModifierKey modifierKey1, ModifierKey modifierKey2, ModifierKey modifierKey3, out ActionElementMap result) method overload.
+    - Added ControllerMap.ReplaceElementMap(int elementMapId, int actionId, Pole axisContribution, KeyCode keyCode, ModifierKeyFlags modifierKeyFlags, out ActionElementMap result) method overload.
+    - Added ControllerMap.ReplaceElementMap(int elementMapId, int actionId, Pole axisContribution, int elementIdentifierId, ControllerElementType elementType, AxisRange axisRange, bool invert, out ActionElementMap result) method overload.
+    - Added ControllerMapWithAxes.GetFirstAxisMapMatch method.
+    - Added ControllerMapWithAxes.GetAxisMapMatches method.
+    - Added ControllerMapWithAxes.ForEachAxisMapMatch method.
+    - Added ControllerMapWithAxes.SetAllAxisMapsEnabled method.
+    - Added ControllerMapWithAxes.DoesElementAssignmentConflict(ControllerMap controllerMap, bool skipDisabledMaps) method overload.
+    - Added ControllerMapWithAxes.DoesElementAssignmentConflict(ActionElementMap actionElementMap, bool skipDisabledMaps) method overload.
+    - Added ControllerMapWithAxes.DoesElementAssignmentConflict(ElementAssignmentConflictCheck conflictCheck, bool skipDisabledMaps) method overload.
+    - Added ControllerMapWithAxes.ElementAssignmentConflicts(ControllerMap controllerMap, bool skipDisabledMaps) method overload.
+    - Added ControllerMapWithAxes.ElementAssignmentConflicts(ActionElementMap actionElementMap, bool skipDisabledMaps) method overload.
+    - Added ControllerMapWithAxes.ElementAssignmentConflicts(ElementAssignmentConflictCheck conflictCheck, bool skipDisabledMaps) method overload.
+    - Added ControllerMapWithAxes.RemoveElementAssignmentConflicts(ControllerMap controllerMap, bool skipDisabledMaps) method overload.
+    - Added ControllerMapWithAxes.RemoveElementAssignmentConflicts(ActionElementMap actionElementMap, bool skipDisabledMaps) method overload.
+    - Added ControllerMapWithAxes.RemoveElementAssignmentConflicts(ElementAssignmentConflictCheck conflictCheck, bool skipDisabledMaps) method overload.
+    - Added ControllerMapWithAxes.AxisMapsWithAction(string actionName, bool skipDisabledMaps) method overload.
+    - Added ControllerMapWithAxes.AxisMapsWithAction(int actionId, bool skipDisabledMaps) method overload.
+    - Added ControllerMapWithAxes.GetFirstAxisMapWithAction(int actionId, bool skipDisabledMaps) method overload.
+    - Added ControllerMapWithAxes.GetFirstAxisMapWithAction(string actionName, bool skipDisabledMaps) method overload.
+    - Added ControllerMapWithAxes.GetAxisMaps(bool skipDisabledMaps) method overload.
+    - Added ControllerMapWithAxes.GetAxisMapsWithAction(string actionName, bool skipDisabledMaps) method overload.
+    - Added ControllerMapWithAxes.GetAxisMapsWithAction(int actionId, bool skipDisabledMaps) method overload.
+    - Added ControllerMapWithAxes.GetFirstElementMapWithAction(int actionId, bool skipDisabledMaps) method overload.
+    - Added ReInput.ControllerHelper.ConflictCheckingHelper.DisableElementAssignmentConflicts method.
+    - Added ReInput.MappingHelper.GetControllerMap method.
+    - Added ReInput.MappingHelper.GetActionElementMap method.
+    - Added PlayerIdPropertyAttribute.
+    - Added Axis2DCalibration class.
+    - Added Rewired.Platforms.WindowsStandalonePrimaryInputSource.XInput enum.
+    - Added ElementAssignmentConflictInfo.player property.
+    - Added ElementAssignmentConflictInfo.action property.
+    - Added ElementAssignmentConflictInfo.controller property.
+    - Added ElementAssignmentConflictInfo.controllerMap property.
+    - Added ElementAssignmentConflictInfo.elementIdentifier property.
+    - Added ElementAssignmentConflictInfo.elementMap property.
+    - Added ElementAssignmentConflictInfo.elementDisplayName property.
+    - Added InputMapper class.
+    - Added InputMapper.Options class.
+    - Added InputMapper.Context class.
+    - Added InputMapper.EventData class.
+    - Added InputMapper.InputMappedEventData class.
+    - Added InputMapper.ErrorEventData class.
+    - Added InputMapper.CanceledEventData class.
+    - Added InputMapper.TimedOutEventData class.
+    - Added InputMapper.StartedEventData class.
+    - Added InputMapper.StoppedEventData class.
+    - Added InputMapper.ConflictFoundEventData class.
+    - Added InputMapper.ConflictResponse enum.
+    - Removed obsolete Player.ControllerHelper.MapHelper.SetMapsEnabled(bool state, int categoryId, int layoutId) method overload.
+    - Changed return type of Player.GetMaps(ControllerType controllerType, int controllerId) to IList<ControllerMap> from IEnumerable<ControllerMap>.
+    - Changed return type of ControllerMap.AllMaps to IList<ActionElementMap> from IEnumerable<ActionElementMap>
+    - Changed ControllerWithButtons.PollForAllButtons() to virtual.
+    - Changed ControllerWithButtons.PollForAllButtonsDown() to virtual.
+    - Moved ControllerWithMap functionality into Controller.
+  
+  Integration Changes:
+    - PlayMaker:
+      New Actions:
+      RewiredControllerGetEnabled
+      RewiredControllerSetEnabled
+      RewiredPlayerGetFirstElementMapIdWithAction
+      RewiredPlayerGetAxisDelta
+      RewiredPlayerGetAxisRawDelta
+      RewiredPlayerGetButtonRepeating
+      RewiredPlayerGetNegativeButtonRepeating
+      RewiredActionElementMapGetEnabled
+      RewiredActionElementMapGetActionId
+      RewiredActionElementMapGetElementType
+      RewiredActionElementMapGetElementIdentifierId
+      RewiredActionElementMapGetAxisRange
+      RewiredActionElementMapGetInvert
+      RewiredActionElementMapGetAxisContribution
+      RewiredActionElementMapGetKeyboardKeyCode
+      RewiredActionElementMapGetModifierKey1
+      RewiredActionElementMapGetModifierKey2
+      RewiredActionElementMapGetModifierKey3
+      RewiredActionElementMapGetAxisType
+      RewiredActionElementMapGetModifierKeyFlags
+      RewiredActionElementMapGetKeyCode
+      RewiredActionElementMapGetHasModifiers
+      RewiredActionElementMapGetElementIndex
+      RewiredActionElementMapSetEnabled
+      RewiredActionElementMapSetInvert
+      
+    - Behavior Designer:
+      New Tasks:
+      RewiredControllerGetEnabled
+      RewiredControllerSetEnabled
+      RewiredPlayerGetFirstElementMapWithAction
+      RewiredPlayerGetAxisDelta
+      RewiredPlayerGetAxisRawDelta
+      RewiredPlayerGetButtonRepeating
+      RewiredPlayerGetNegativeButtonRepeating
+      RewiredActionElementMapGetEnabled
+      RewiredActionElementMapGetActionId
+      RewiredActionElementMapGetElementType
+      RewiredActionElementMapGetElementIdentifierId
+      RewiredActionElementMapGetAxisRange
+      RewiredActionElementMapGetInvert
+      RewiredActionElementMapGetAxisContribution
+      RewiredActionElementMapGetKeyboardKeyCode
+      RewiredActionElementMapGetModifierKey1
+      RewiredActionElementMapGetModifierKey2
+      RewiredActionElementMapGetModifierKey3
+      RewiredActionElementMapGetAxisType
+      RewiredActionElementMapGetModifierKeyFlags
+      RewiredActionElementMapGetKeyCode
+      RewiredActionElementMapGetHasModifiers
+      RewiredActionElementMapGetElementIndex
+      RewiredActionElementMapSetEnabled
+      RewiredActionElementMapSetInvert
+      
+  Bug Fixes:
+    - Fixed bug causing Windows 8.1 Universal builds to always fall back to Unity input.
+    - Fixed bug in ControllerMap.RemoveElementAssignmentConflicts(ControllerMap controllerMap) when called on a Keyboard Map.
+    - Fixed bug in ControllerMap.RemoveElementAssignmentConflicts(ControllerMap controllerMap) which caused conflicting assigments to be removed from both controller maps.
+    - Windows Standalone: Fixed hang on Unity 5.3+ when the application loses focus for more than 5 seconds with no mouse movement with "Run In Background" and "Exclusive Mode" set in the Unity Player properties while using Raw Input or Direct Input with Native Mouse Handling enabled.
+    - Rewired Editor window now refreshes properly after stopping Play mode in the Editor.
+    - Fixed bug in Rewired Editor where moving an Action to a different Action Category caused existing mappings using that Action to be cleared the next time you edited that mapping.
+
 1.0.0.112:
 
   Changes:
