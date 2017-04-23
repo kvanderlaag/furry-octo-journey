@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 7}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -340,10 +340,10 @@ MonoBehaviour:
   m_DepthBufferBits: 0
   m_Pos:
     serializedVersion: 2
-    x: 297
+    x: 335
     y: 92
-    width: 889
-    height: 425
+    width: 738
+    height: 427
   m_AnimEditor: {fileID: 0}
   m_Locked: 0
 --- !u!114 &15
@@ -478,19 +478,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/_Scenes
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/_Scenes
   m_LastFoldersGridSize: 16
   m_LastProjectPath: D:\Projects\furry-octo-journey\SmallWorld
   m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 95}
-    m_SelectedIDs: 68250000
-    m_LastClickedID: 9576
-    m_ExpandedIDs: 000000006825000026260000a22600003c310000443100009a340000f23500006036000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 5e3e0000
+    m_LastClickedID: 15966
+    m_ExpandedIDs: 0000000030300000d23000003c31000004320000ba360000ca3a0000d23a0000f63c00009e3d0000203f000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -518,7 +518,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000006825000026260000a22600003c310000443100009a340000f235000060360000
+    m_ExpandedIDs: 0000000030300000d23000003c310000ca3a0000d23a00009e3d0000be3e0000203f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -634,23 +634,23 @@ MonoBehaviour:
     height: 427
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 70370000
-    m_LastClickedID: 14192
-    m_ExpandedIDs: dcfbffff00000000
+    m_SelectedIDs: be3f0000
+    m_LastClickedID: 16318
+    m_ExpandedIDs: bcfbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: advancedCharacter
+      m_OriginalName: advancedCharacter
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: 16318
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 5}
     m_SearchString: 
@@ -686,14 +686,14 @@ MonoBehaviour:
     width: 738
     height: 427
   m_SceneLighting: 1
-  lastFramingTime: 68.84343365152351
+  lastFramingTime: 6352.094332061673
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 2.198015, y: 3.1233373, z: -0.50408685}
+    m_Target: {x: 2.2529035, y: 1.9963756, z: -4.0948277}
     speed: 2
-    m_Value: {x: 2.198015, y: 3.1233373, z: -0.50408685}
+    m_Value: {x: 2.2529035, y: 1.9963756, z: -4.0948277}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -716,13 +716,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.019819409, y: 0.8454996, z: 0.03145885, w: -0.53268015}
+    m_Target: {x: 0.31035984, y: 0.5724485, z: -0.24765499, w: 0.7173887}
     speed: 2
-    m_Value: {x: 0.019819407, y: 0.84549946, z: 0.03145885, w: -0.5326801}
+    m_Value: {x: 0.31035984, y: 0.5724485, z: -0.24765499, w: 0.7173887}
   m_Size:
-    m_Target: 4.94413
+    m_Target: 0.37406895
     speed: 2
-    m_Value: 4.94413
+    m_Value: 0.37406895
   m_Ortho:
     m_Target: 0
     speed: 2

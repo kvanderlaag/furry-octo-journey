@@ -15,8 +15,7 @@ public class CameraController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.position = m_target.position + (m_target.position - m_planet.position).normalized * m_baseDistance;
-
+        transform.position = m_target.position + (m_target.up * m_baseDistance);
         transform.LookAt(m_target, Vector3.up);
 
     }
