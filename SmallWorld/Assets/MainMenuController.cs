@@ -10,7 +10,7 @@ public class MainMenuController : MonoBehaviour {
 	
 	public void PlayLocal() {
 		// TODO-DG: Go to local scene
-		SceneManager.LoadScene("PlanetLoad");
+		SceneManager.LoadScene("GeneratePlanet");
 	}
 
 	public void PlayMulti() {

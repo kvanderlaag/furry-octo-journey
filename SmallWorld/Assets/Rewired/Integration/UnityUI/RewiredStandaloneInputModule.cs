@@ -21,7 +21,7 @@ namespace Rewired.Integration.UnityUI {
 
         private const string DEFAULT_ACTION_MOVE_HORIZONTAL = "UIHorizontal";
         private const string DEFAULT_ACTION_MOVE_VERTICAL = "UIVertical";
-        private const string DEFAULT_ACTION_SUBMIT = "UISubmit";
+        private const string DEFAULT_ACTION_SUBMIT = "UISubmouse.it";
         private const string DEFAULT_ACTION_CANCEL = "UICancel";
 
         private int[] playerIds;
@@ -303,7 +303,7 @@ namespace Rewired.Integration.UnityUI {
             
             if(isMouseSupported) {
                 m_LastMousePosition = m_MousePosition;
-                m_MousePosition = ReInput.controllers.Mouse.screenPosition;
+                m_MousePosition = UnityEngine.Input.mousePosition;
             }
         }
 
@@ -338,7 +338,7 @@ namespace Rewired.Integration.UnityUI {
             // Mouse input
             if(isMouseSupported) {
                 shouldActivate |= (m_MousePosition - m_LastMousePosition).sqrMagnitude > 0.0f;
-                shouldActivate |= ReInput.controllers.Mouse.GetButtonDown(0);
+                shouldActivate |= UnityEngine.Input.GetMouseButtonDown(0);
             }
 
             // Touch input
@@ -358,7 +358,7 @@ namespace Rewired.Integration.UnityUI {
             base.ActivateModule();
 
             if(isMouseSupported) {
-                Vector2 mousePosition = ReInput.controllers.Mouse.screenPosition;
+                Vector2 mousePosition = UnityEngine.Input.mousePosition;
                 m_MousePosition = mousePosition;
                 m_LastMousePosition = mousePosition;
             }
