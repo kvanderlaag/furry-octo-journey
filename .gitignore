@@ -4,6 +4,7 @@
 /SmallWorld/[Bb]uild/
 /SmallWorld/[Bb]uilds/
 /SmallWorld/Assets/AssetStoreTools*
+/SmallWorld/Assets/Rewired/*
 
 # Mac junk
 *.DS_STORE
